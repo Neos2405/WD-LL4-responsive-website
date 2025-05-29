@@ -1,0 +1,48 @@
+/* 
+This CSS file contains styles for the Eco-friendly travel website. 
+It includes basic styles for layout, colors, and responsive design.
+*/
+
+/* Set a default font for the entire body */
+body {
+    font-family: Arial, sans-serif; /* Use a simple, clean font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #e0f7fa; /* Light blue background for a fresh look */
+    color: #333; /* Dark gray text color for readability */
+}
+
+/* Style for the header */
+header {
+    background-color: #00796b; /* Teal background for the header */
+    color: white; /* White text color */
+    padding: 10px; /* Add some padding */
+    text-align: center; /* Center the text */
+}
+
+/* Style for the main content area */
+main {
+    padding: 20px; /* Add padding around the main content */
+}
+
+/* Style for the footer */
+footer {
+    background-color: #004d40; /* Darker teal for the footer */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Add some padding */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    header, footer {
+        padding: 15px; /* Increase padding for smaller screens */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
