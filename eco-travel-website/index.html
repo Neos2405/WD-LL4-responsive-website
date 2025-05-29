@@ -1,47 +1,100 @@
-<!-- filepath: /eco-travel-website/eco-travel-website/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eco-Friendly Travel</title>
+  <meta name="viewport" content="width=device-width">
+  <title>LiveLab 4 Demo</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <header>
-    <h1>Welcome to Eco-Friendly Travel</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Responsive Hero Header -->
+  <header class="hero-header">
+    <div class="hero-content">
+      <h1>Wander Green, Live Clean</h1>
+      <p>Travel the world while preserving its beauty. Join us for eco-friendly adventures that protect nature, support local communities, and create lasting memories.</p>
+      <a href="#" class="cta-btn">Book your first green trip now!</a>
+    </div>
   </header>
 
+  <!-- Navigation Menu -->
+  <nav>
+    <!-- Company name on the left (mobile), center (desktop) -->
+    <span class="nav-brand">
+      <span class="green">GREEN</span><span class="trip">TRIP</span>
+    </span>
+    <button class="nav-toggle" aria-label="Open navigation menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
   <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>We promote eco-friendly travel options to help protect our planet.</p>
+    <!-- Eco-friendly Destinations Section -->
+    <section class="eco-destinations">
+      <h2>Eco-Friendly Destinations</h2>
     </section>
-
-    <section id="destinations">
-      <h2>Destinations</h2>
-      <p>Explore our list of sustainable travel destinations.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Get in touch for more information about our services.</p>
-    </section>
+    <!-- Container for the cards, always 100px from left and right -->
+    <div class="card-container">
+      <div class="destination-cards">
+        <!-- Card 1: Vietnam -->
+        <div class="destination-card">
+          <div class="destination-card-img">
+            <!-- Updated image for Vietnam -->
+            <img src="https://images.unsplash.com/photo-1676836186628-7a2786e4c9a3?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ha Long Bay, Vietnam">
+          </div>
+          <div class="destination-card-text">
+            <h3 class="place-name">Ha Long Bay, Vietnam</h3>
+            <p class="destination-desc">Cruise among emerald waters and limestone islands in this UNESCO World Heritage site, known for its natural beauty and eco-friendly tours.</p>
+          </div>
+          <div class="price-row">
+            <span class="destination-price">$900</span>
+            <span class="destination-discount">$700</span>
+          </div>
+        </div>
+        <!-- Card 2: Japan -->
+        <div class="destination-card">
+          <div class="destination-card-img">
+            <!-- Updated image for Japan -->
+            <img src="https://images.unsplash.com/photo-1723536415988-318f84346aac?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Yakushima, Japan">
+          </div>
+          <div class="destination-card-text">
+            <h3 class="place-name">Yakushima, Japan</h3>
+            <p class="destination-desc">Explore ancient cedar forests, waterfalls, and rare wildlife on this lush Japanese island, a model for sustainable tourism.</p>
+          </div>
+          <div class="price-row">
+            <span class="destination-price">$1,200</span>
+            <span class="destination-discount">$950</span>
+          </div>
+        </div>
+        <!-- Card 3: Korea -->
+        <div class="destination-card">
+          <div class="destination-card-img">
+            <!-- Updated image for Korea -->
+            <img src="https://images.unsplash.com/photo-1610997999027-681b320cee66?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jeju Island, Korea">
+          </div>
+          <div class="destination-card-text">
+            <h3 class="place-name">Jeju Island, Korea</h3>
+            <p class="destination-desc">Enjoy volcanic landscapes, green tea fields, and eco-parks on Korea's most famous island, celebrated for its clean air and green initiatives.</p>
+          </div>
+          <div class="price-row">
+            <span class="destination-price">$1,100</span>
+            <span class="destination-discount">$850</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
+  <!-- Site Footer -->
   <footer>
-    <p>&copy; 2023 Eco-Friendly Travel. All rights reserved.</p>
+    <p>&copy; 2025 Eco Travel. All rights reserved.</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 
