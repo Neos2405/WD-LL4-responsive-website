@@ -39,26 +39,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Slide cards on hover (mobile only) ---
   // Only enable card sliding on hover for mobile/tablet (below 900px)
-  function enableCardSlide() {
-    document.querySelectorAll('.destination-card').forEach(function(card) {
-      // Always remove any previous handler first
-      if (card._slideHandler) {
-        card.removeEventListener('mouseenter', card._slideHandler);
-        card._slideHandler = null;
-      }
-    });
-    if (window.innerWidth < 900) {
-      document.querySelectorAll('.destination-card').forEach(function(card) {
-        card._slideHandler = function() {
-          card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        };
-        card.addEventListener('mouseenter', card._slideHandler);
-      });
-    }
-  }
+  // This feature is now removed so cards do not move on hover. Users can drag to scroll.
+});
 
-  // Run on load
-  window.addEventListener('DOMContentLoaded', enableCardSlide);
-  // Run on resize
-  window.addEventListener('resize', enableCardSlide);
+// Make the card slider draggable with mouse or touch
+// This code is beginner-friendly and uses basic JavaScript
+
+// Wait for the DOM to load
+window.addEventListener('DOMContentLoaded', function() {
+  var slider = document.querySelector('.destination-cards');
+  if (!slider) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // Mouse events
+  slider.addEventListener('mousedown', function(e) {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener('mouseleave', function() {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+  slider.addEventListener('mouseup', function() {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+  slider.addEventListener('mousemove', function(e) {
+    if (!isDown) return;
+    e.preventDefault();
+    var x = e.pageX - slider.offsetLeft;
+    var walk = (x - startX) * 1.2; // Scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+  });
+
+  // Touch events for mobile
+  slider.addEventListener('touchstart', function(e) {
+    isDown = true;
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener('touchend', function() {
+    isDown = false;
+  });
+  slider.addEventListener('touchmove', function(e) {
+    if (!isDown) return;
+    var x = e.touches[0].pageX - slider.offsetLeft;
+    var walk = (x - startX) * 1.2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
 });

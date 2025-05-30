@@ -414,3 +414,12 @@ nav {
 }
 
 /* Remove old conflicting flexbox/grid/card media queries and styles */
+
+/* Make the card slider draggable on desktop and mobile */
+.destination-cards {
+  cursor: grab; /* Show grab cursor to indicate draggable */
+  user-select: none; /* Prevent text/image selection while dragging */
+}
+.destination-cards:active {
+  cursor: grabbing;
+}
