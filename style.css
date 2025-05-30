@@ -197,9 +197,9 @@ nav {
   font-weight: bold;
 }
 
-/* Make hero section description darker and italic for better readability */
+/* Make hero section description an even lighter gray and italic */
 .hero-header p {
-  color: #222; /* Darker text for better contrast */
+  color: #bbb; /* Even lighter gray for a softer look */
   font-style: italic; /* Italic style for emphasis */
   margin-bottom: 28px;
 }
